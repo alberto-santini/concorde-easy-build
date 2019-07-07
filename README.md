@@ -15,6 +15,8 @@ stackoverflow questions
 [[5](https://stackoverflow.com/questions/29056498/cant-build-concorde-tsp-solver-on-mac-yosemite)],
 (to link a few) dicated to this topic.
 
+![](build-concorde.gif)
+
 ## Build Concorde like it's not 1997 any more
 
 In this repository, I store a copy of the 2003 version of Concorde, together with a minimal build system.
