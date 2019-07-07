@@ -3,6 +3,7 @@
 [Concorde](http://www.math.uwaterloo.ca/tsp/concorde/index.html) is likely the most famous solver for the [Travelling Salesman Problem](http://www.math.uwaterloo.ca/tsp/concorde/index.html).
 It was developed by four legends in the Operational Research community: David Applegate, Robert Bixby, Vasek Chvatal, and William Cook.
 The solver is blazing fast, and is able to solve enormous instances.
+
 However, as most of its users know, building Concorde can be painful.
 So painful that people have written
 [technical reports](https://www.researchgate.net/publication/324485167_Concorde_solver_installation_and_use),
@@ -17,7 +18,9 @@ stackoverflow questions
 
 ![](build-concorde.gif)
 
-## Build Concorde like it's not 1997 any more
+# Build Concorde like it's not 1997 any more
+
+## License
 
 In this repository, I store a copy of the 2003 version of Concorde, together with a minimal build system.
 Let me stress that this is a totally pirate version of the software.
@@ -27,16 +30,21 @@ If you are using Concorde from this repository you have to agree to exactly the 
 In short, this means that Concorde is free for you if and only if you use it for academic purposes.
 In all other cases you should contact [William Cook](mailto:bico@uwaterloo.ca) to discuss licensing options.
 
+For what concern my contribution, which is basically a `CMakeLists.txt` file, I release it to public domain under the [unlicense](https://unlicense.org/).
+
 ## Assumptions
 
 My egomania has emerged when building this repository.
 I assumed that everyone is exactly like me and, in particular:
+
 * You are on Linux, with a recent version of GCC.
 * You use CMake as your build system.
 * You use a recent version of CPLEX as your LP solver.
+
 Users not corresponding to this identikit might have to adapt this solution.
 
 I also assume that you are interested in having the following, and nothing else, at the end of the build process:
+
 * The executable (`concorde`).
 * A shared library (`libconcorde.a`) and an include file (`concorde.h`) to use Concorde with your custom software.
 
