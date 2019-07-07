@@ -7,13 +7,13 @@ However, as most of its users know, building Concorde can be painful.
 So painful that people have written
 [technical reports](https://www.researchgate.net/publication/324485167_Concorde_solver_installation_and_use),
 blog posts
-[[1](https://www.leandro-coelho.com/install-and-run-concorde-with-cplex/)],
-[[2](https://www.leandro-coelho.com/installing-concorde-tsp-with-cplex-linux/)],
-[[3](https://hackaday.io/project/158802-improve-tool-path-planning-in-cura/log/147747-using-concorde-tsp-solver)],
+[[1](https://www.leandro-coelho.com/install-and-run-concorde-with-cplex/),
+[2](https://www.leandro-coelho.com/installing-concorde-tsp-with-cplex-linux/),
+[3](https://hackaday.io/project/158802-improve-tool-path-planning-in-cura/log/147747-using-concorde-tsp-solver)],
 stackoverflow questions
-[[4](https://stackoverflow.com/questions/48284456/concorde-installation-need-to-link-an-lp-solver-to-use-this-function)],
-[[5](https://stackoverflow.com/questions/29056498/cant-build-concorde-tsp-solver-on-mac-yosemite)],
-(to link a few) dicated to this topic.
+[[4](https://stackoverflow.com/questions/48284456/concorde-installation-need-to-link-an-lp-solver-to-use-this-function),
+[5](https://stackoverflow.com/questions/29056498/cant-build-concorde-tsp-solver-on-mac-yosemite)],
+(to link a few) dedicated to this topic.
 
 ![](build-concorde.gif)
 
