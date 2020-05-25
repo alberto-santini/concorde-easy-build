@@ -1117,7 +1117,7 @@ static int begin_get (CCtsp_PROB_FILE *p, int offset, char section, int silent)
 static int begin_copy (CCtsp_PROB_FILE *f, int foffset, CCtsp_PROB_FILE *t,
         int *toffset, char section, int silent)
 {
-    char exists;
+    char exists = 0;
 
     if (f->type == PROB_LOCAL) {
         if (foffset == -1) {

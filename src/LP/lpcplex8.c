@@ -1592,7 +1592,7 @@ int CClp_dump_lp (CClp *lp, const char *fname)
     strncpy (nambuf, fname, sizeof (nambuf));
     nambuf[sizeof(nambuf)-1] = '\0';
 
-    rval = CPXsavwrite (lp->cplex_env, lp->cplex_lp, nambuf);
+    rval = CPXwriteprob (lp->cplex_env, lp->cplex_lp, nambuf, NULL);
     if (rval) {
         fprintf (stderr, "CPXsavwrite failed\n");
     }

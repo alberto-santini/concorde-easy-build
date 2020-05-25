@@ -9,7 +9,7 @@ set(DEBUG_OPTIONS               -O0)
 set(GDB_DEBUG_OPTIONS           -ggdb3)
 set(LINKER_OPTIONS              -flto -Wl,--no-as-needed)
 
-find_package(Cplex REQUIRED)
+find_package(CPLEX REQUIRED)
 
 add_compile_options(${WARNING_OPTIONS})
 add_compile_options($<$<CONFIG:RELEASE>:${RELEASE_OPTIONS}>)
@@ -37,7 +37,7 @@ add_library(concorde_utils
 target_compile_features(    concorde_utils PUBLIC c_std_11)
 target_link_libraries(      concorde_utils PUBLIC ${LINKER_OPTIONS})
 target_link_libraries(      concorde_utils PRIVATE dl)
-target_compile_options(     concorde_utils PRIVATE -Wno-unused-function)
+target_compile_options(     concorde_utils PRIVATE -Wno-unused-function -Wno-stringop-truncation)
 
 add_library(concorde_lp
         src/LP/lpcplex8.c)
