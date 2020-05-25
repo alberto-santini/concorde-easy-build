@@ -1,13 +1,13 @@
 find_path(CPLEX_INCLUDE_DIR
     NAMES ilcplex/cplex.h
     PATHS ${CPLEX_ROOT_DIR}
-    PATH_SUFFIXES cplex/include
+    PATH_SUFFIXES include cplex/include
 )
 
 find_path(CONCERT_INCLUDE_DIR
     NAMES ilconcert/iloenv.h
     PATHS ${CPLEX_ROOT_DIR}
-    PATH_SUFFIXES concert/include
+    PATH_SUFFIXES include concert/include
 )
 
 file(GLOB CPLEX_LIB_PATHS "${CPLEX_ROOT_DIR}/cplex/lib/*/static_pic")
