@@ -316,14 +316,13 @@ CLEANUP:
 
     if (rval == 0) {
         char buf[1024];
-        int sval;
 
         sprintf (buf, "%s.pul", pname);
-        sval = CCutil_sdelete_file (buf);
-        sval = CCutil_sdelete_file_backup (buf);
+        CCutil_sdelete_file (buf);
+        CCutil_sdelete_file_backup (buf);
         sprintf (buf, "%s.sav", pname);
-        sval = CCutil_sdelete_file (buf);
-        sval = CCutil_sdelete_file_backup (buf);
+        CCutil_sdelete_file (buf);
+        CCutil_sdelete_file_backup (buf);
     }
 
     CCtsp_free_tsp_lp_struct (&lp);

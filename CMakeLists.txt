@@ -184,7 +184,8 @@ add_library(concorde
         src/TSP/cutcall.c
         src/TSP/teething.c
         src/TSP/ddecker.c
-        src/TSP/combcliq.c)
+        src/TSP/combcliq.c
+        src/TSP/tsp_call.c)
 target_compile_features(    concorde PUBLIC c_std_11)
 target_link_libraries(      concorde PUBLIC ${LINKER_OPTIONS})
 target_link_libraries(      concorde PUBLIC concorde_utils)
@@ -206,6 +207,7 @@ target_link_libraries(      concorde PUBLIC pthread)
 target_compile_options(     concorde PRIVATE -Wno-unused-function)
 target_compile_options(     concorde PRIVATE -Wno-stringop-truncation)
 target_compile_options(     concorde PRIVATE -Wno-stringop-overflow)
+target_compile_options(     concorde PRIVATE -Wno-format-overflow)
 set_target_properties(      concorde PROPERTIES POSITION_INDEPENDENT_CODE ON)
 # set_target_properties(      concorde PROPERTIES SOVERSION 1)
 
