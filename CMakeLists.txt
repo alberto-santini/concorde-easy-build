@@ -246,3 +246,23 @@ add_custom_command(TARGET concorde POST_BUILD
         COMMAND cat config.h machdefs.h util.h bigguy.h combs.h cut.h delaunay.h edgegen.h fmatch.h heldkarp.h kdtree.h linkern.h lp.h tsp.h consec1.h localcut.h macrorus.h mlinkern.h necklace.h pqsets.h pq.h cuttree.h tinytsp.h tsp.h verify.h | grep -v '\#include \"' > ${CMAKE_CURRENT_BINARY_DIR}/concorde.h
         WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/src/INCLUDE"
         COMMENT "Creating concorde.h")
+
+add_custom_command(TARGET concorde-bin POST_BUILD
+        COMMAND rm *.c.o
+        COMMAND rm libconcorde_utils.a
+        COMMAND rm libconcorde_lp.a
+        COMMAND rm libconcorde_bigguy.a
+        COMMAND rm libconcorde_heldkarp.a
+        COMMAND rm libconcorde_edgegen.a
+        COMMAND rm libconcorde_linkern.a
+        COMMAND rm libconcorde_localcut.a
+        COMMAND rm libconcorde_pq.a
+        COMMAND rm libconcorde_cut.a
+        COMMAND rm libconcorde_fmatch.a
+        COMMAND rm libconcorde_kdtree.a
+        COMMAND rm libconcorde_combs.a
+        COMMAND rm libconcorde_verify.a
+        COMMAND rm libconcorde_tiny.a
+        COMMAND rm libconcorde.a
+        WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
+        COMMENT "Cleaning up temporary object files")
