@@ -215,29 +215,30 @@ target_compile_features(    concorde-bin PUBLIC c_std_11)
 target_link_libraries(      concorde-bin PUBLIC ${LINKER_OPTIONS})
 target_link_libraries(      concorde-bin PUBLIC concorde)
 
-# add_custom_command(TARGET concorde POST_BUILD
-#         COMMAND ar -x libconcorde_utils.a
-#         COMMAND ar -x libconcorde_lp.a
-#         COMMAND ar -x libconcorde_bigguy.a
-#         COMMAND ar -x libconcorde_heldkarp.a
-#         COMMAND ar -x libconcorde_edgegen.a
-#         COMMAND ar -x libconcorde_linkern.a
-#         COMMAND ar -x libconcorde_localcut.a
-#         COMMAND ar -x libconcorde_pq.a
-#         COMMAND ar -x libconcorde_cut.a
-#         COMMAND ar -x libconcorde_fmatch.a
-#         COMMAND ar -x libconcorde_kdtree.a
-#         COMMAND ar -x libconcorde_combs.a
-#         COMMAND ar -x libconcorde_verify.a
-#         COMMAND ar -x libconcorde_tiny.a
-#         COMMAND ar -qc libconcorde.a *.o
-#         WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
-#         COMMENT "Creating libconcorde.a")
-
 add_custom_command(TARGET concorde POST_BUILD
         COMMAND gcc -fPIC -shared -o libconcorde_full.so -Wl,--whole-archive *.a ${CPLEX_LIBRARIES} -lstdc++ -Wl,--no-whole-archive
         WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
         COMMENT "Creating libconcorde_full.so")
+
+add_custom_command(TARGET concorde POST_BUILD
+        COMMAND ar -x libconcorde_utils.a
+        COMMAND ar -x libconcorde_lp.a
+        COMMAND ar -x libconcorde_bigguy.a
+        COMMAND ar -x libconcorde_heldkarp.a
+        COMMAND ar -x libconcorde_edgegen.a
+        COMMAND ar -x libconcorde_linkern.a
+        COMMAND ar -x libconcorde_localcut.a
+        COMMAND ar -x libconcorde_pq.a
+        COMMAND ar -x libconcorde_cut.a
+        COMMAND ar -x libconcorde_fmatch.a
+        COMMAND ar -x libconcorde_kdtree.a
+        COMMAND ar -x libconcorde_combs.a
+        COMMAND ar -x libconcorde_verify.a
+        COMMAND ar -x libconcorde_tiny.a
+        COMMAND ar -x libconcorde.a
+        COMMAND ar -qc libconcorde_full.a *.o
+        WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
+        COMMENT "Creating libconcorde_full.a")
 
 add_custom_command(TARGET concorde POST_BUILD
         COMMAND cat config.h machdefs.h util.h bigguy.h combs.h cut.h delaunay.h edgegen.h fmatch.h heldkarp.h kdtree.h linkern.h lp.h tsp.h consec1.h localcut.h macrorus.h mlinkern.h necklace.h pqsets.h pq.h cuttree.h tinytsp.h tsp.h verify.h | grep -v '\#include \"' > ${CMAKE_CURRENT_BINARY_DIR}/concorde.h
