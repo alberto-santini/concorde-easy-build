@@ -45,8 +45,8 @@ Users not corresponding to this identikit might have to adapt this solution.
 
 I also assume that you are interested in having the following, and nothing else, at the end of the build process:
 
-* The executable (`concorde`).
-* A shared library (`libconcorde.a`) and an include file (`concorde.h`) to use Concorde with your custom software.
+* The executable (`concorde-bin`).
+* A shared library (`libconcorde_full.so`), an archive file (`libconcorde_full.a`) and an include file (`concorde.h`) to use Concorde with your custom software.
 
 ## Building
 
@@ -60,4 +60,4 @@ cmake -DCMAKE_BUILD_TYPE=Release -DCPLEX_ROOT_DIR=/opt/ibm/CPLEX/my-cplex ..
 make -j5
 ```
 
-This will create the three files: `concorde`, `libconcorde.a`, and `concorde.h`.
+This will create the four files: `concorde-bin`, `libconcorde_full.so`, `libconcorde_full.a`, and `concorde.h`.
