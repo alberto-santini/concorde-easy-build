@@ -71,7 +71,7 @@ add_library(concorde_edgegen
         src/EDGEGEN/mlinkern.c)
 target_compile_features(    concorde_edgegen PUBLIC c_std_11)
 target_link_libraries(      concorde_edgegen PUBLIC ${LINKER_OPTIONS})
-target_compile_options(     concorde_edgegen PRIVATE -Wno-unused-function)
+target_compile_options(     concorde_edgegen PRIVATE -Wno-unused-function -Wno-unused-result)
 set_target_properties(      concorde_edgegen PROPERTIES POSITION_INDEPENDENT_CODE ON)
 # set_target_properties(      concorde_edgegen PROPERTIES SOVERSION 1)
 
