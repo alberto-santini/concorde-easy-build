@@ -208,6 +208,7 @@ target_compile_options(     concorde PRIVATE -Wno-unused-function)
 target_compile_options(     concorde PRIVATE -Wno-stringop-truncation)
 target_compile_options(     concorde PRIVATE -Wno-stringop-overflow)
 target_compile_options(     concorde PRIVATE -Wno-format-overflow)
+target_compile_options(     concorde PRIVATE -Wno-unused-result)
 set_target_properties(      concorde PROPERTIES POSITION_INDEPENDENT_CODE ON)
 # set_target_properties(      concorde PROPERTIES SOVERSION 1)
 
