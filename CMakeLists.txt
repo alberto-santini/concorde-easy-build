@@ -38,7 +38,7 @@ add_library(concorde_utils
 target_compile_features(    concorde_utils PUBLIC c_std_11)
 target_link_libraries(      concorde_utils PUBLIC ${LINKER_OPTIONS})
 target_link_libraries(      concorde_utils PRIVATE dl)
-target_compile_options(     concorde_utils PRIVATE -Wno-unused-function -Wno-stringop-truncation)
+target_compile_options(     concorde_utils PRIVATE -Wno-unused-function -Wno-stringop-truncation -Wno-unused-result)
 set_target_properties(      concorde_utils PROPERTIES POSITION_INDEPENDENT_CODE ON)
 # set_target_properties(      concorde_utils PROPERTIES SOVERSION 1)
 
