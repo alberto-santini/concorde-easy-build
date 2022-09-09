@@ -34,8 +34,7 @@ For what concern my contribution, which is basically a `CMakeLists.txt` file, I 
 
 ## Assumptions
 
-My egomania has emerged when building this repository.
-I assumed that everyone is exactly like me and, in particular:
+I assumed that:
 
 * You are on Linux, with a recent version of GCC.
 * You use CMake as your build system.
