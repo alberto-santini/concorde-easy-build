@@ -18,7 +18,9 @@ stackoverflow questions
 
 ![](build-concorde.gif)
 
-# Build Concorde like it's not 1997 any more
+# Build Concorde like it's no longer 1997
+
+This repository allows you to build concorde using modern toolchains.
 
 ## License
 
