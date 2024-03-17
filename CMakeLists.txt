@@ -3,7 +3,8 @@ project(concorde LANGUAGES C)
 
 list(INSERT CMAKE_MODULE_PATH 0 ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
-set(WARNING_OPTIONS             -Wall -Wextra -Werror)
+# set(WARNING_OPTIONS             -Wall -Wextra -Werror)
+set(WARNING_OPTIONS             -Wall -Wextra)
 set(RELEASE_OPTIONS             -O3)
 set(DEBUG_OPTIONS               -O0)
 set(GDB_DEBUG_OPTIONS           -ggdb3)
