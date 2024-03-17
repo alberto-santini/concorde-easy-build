@@ -51,13 +51,13 @@ I also assume that you are interested in having the following, and nothing else,
 
 ## Building
 
-Assume that you have Cplex installed in `/opt/ibm/CPLEX/my-cplex`.
+Assume that you have Cplex installed in `/opt/ibm/ILOG/CPLEX_Studio1210/`.
 Building Concorde, then, is as simple as:
 
 ```
 mkdir build
 cd build
-cmake -DCMAKE_BUILD_TYPE=Release -DCPLEX_ROOT_DIR=/opt/ibm/CPLEX/my-cplex ..
+cmake -DCMAKE_BUILD_TYPE=Release -DCPLEX_ROOT_DIR=/opt/ibm/ILOG/CPLEX_Studio1210/ ..
 make -j5
 ```
 
